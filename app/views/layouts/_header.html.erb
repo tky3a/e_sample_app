@@ -1,0 +1,16 @@
+<!--CSSのnavbar系のクラスはBootstrapで特定の挙動が設定されている-->
+<!--navbar: ナビゲーションバーに付ける基本スタイル -->
+<!--navbar-fixed-top: 上部固定 -->
+<!--navbar-inverse: 色指定 -->
+<header class = "navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "sample app", '#', id: "logo" %>
+  <nav>
+    <ul class = "nav navbar-nav navbar-right">
+        <li><%= link_to "Home", '#' %></li>
+        <li><%= link_to "Help", '#' %></li>
+        <li><%= link_to "Sing in", '#' %></li>
+    </ul>
+  </nav>
+</div>
+</header>

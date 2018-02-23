@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
 /* unibersal(一般) */
 
 html {
@@ -77,4 +81,31 @@ p {
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+/* footer */
+footer {
+  /* margin-top: フッターエリアを少し下に下げる */
+  margin-top: 45px;
+  padding-top: 5px;
+  /* border-top: footerの境界線を分かりやすく表示 */
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+  color: $gray;
+  &:hover {
+    color: $gray-darker;
+  }
+}
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
 }
