@@ -1,0 +1,14 @@
+<!--オブジェクトが空白の場合（エラーが合った場合の処理）-->
+<% if object.errors.any? %>
+  <div id="error_explanation"><!--CSS id-->
+      <div class="alert alert-danger">
+          The form contains <%= pluralize(object.errors.count, "error")%>
+      </div>
+      <ul>
+        <!--エラーメッセージがmsgに代入されて表示される-->
+        <% object.errors.full_messages.each do |msg| %>
+          <li> <%= msg %></li>
+        <% end %>
+      </ul>
+  </div>
+<% end %>
