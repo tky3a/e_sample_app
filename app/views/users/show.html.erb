@@ -1,0 +1,15 @@
+<!--ブラウザのタイトルに名前表示-->
+<% provide(:title, @user.name) %>
+
+<!--内容-->
+<div class="row">
+  <aside class="col-md-4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %></br>
+        <%= @user.email %>
+      </h1>
+    </section>
+  </aside>
+</div>
