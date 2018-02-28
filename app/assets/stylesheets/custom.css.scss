@@ -186,3 +186,7 @@ input {
   @extend .has-error;
   margin-bottom: 0;
 }
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
