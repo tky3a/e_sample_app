@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  #サインアウトできなかったので追加した
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
   devise_for :users, :controllers => {
     :registrations => "registrations"
   }
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :destroy]
   root 'static_pages#home'
 
   match '/help', to: 'static_pages#help', via: 'get'
